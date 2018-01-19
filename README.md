@@ -1,6 +1,6 @@
 # Repo for group "TnT" in IMT3003 - Service Architecture Operations
 
-## Contains:
+## Contains
 
 * Docs
 * Scripts
@@ -14,7 +14,11 @@ Date        | Subject
 01-12       | Introduction. Basic OpenStack setup
 01-19       | Load balancing. apache2, PHP, haproxy
 
-## Group consists of:
+## Group consists of
 
 * Thomas Løkkeborg
 * Trond Håvard Thune
+
+## TODO
+
+* Add lab solutions to 01-19
