@@ -7,19 +7,19 @@
         apt-get update
         apt-get install apache2
 
-added PHP and MySQL support with:
+    added PHP and MySQL support with:
 
-    apt-get install libapache2-mod-php php-mysql
-    apt-get install mysql-client
+        apt-get install libapache2-mod-php php-mysql
+        apt-get install mysql-client
 
 4. Tested it from manager with wget -q -O - http://<manager-ip>/
 5. Installed haproxy with:
 
-    sudo add-apt-repository -y ppa:vbernat/haproxy-1.8
-    apt-get update
-    apt-get install haproxy socat
+        sudo add-apt-repository -y ppa:vbernat/haproxy-1.8
+        apt-get update
+        apt-get install haproxy socat
 
-configured haproxy by adding the following to /etc/haproxy/haproxy.cfg
+    configured haproxy by adding the following to /etc/haproxy/haproxy.cfg
 
         frontend bookface
             bind *:80
