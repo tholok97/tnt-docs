@@ -9,7 +9,7 @@
 
 ## Table of labs
 
-Date        | Subject
+Date        | Topics
 ------------| -----------
 01-12       | Introduction. Basic OpenStack setup
 01-19       | Load balancing. apache2, PHP, haproxy
