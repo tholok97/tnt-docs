@@ -59,3 +59,11 @@ configured haproxy by adding the following to /etc/haproxy/haproxy.cfg
 Sent the info. Chose the group name "TnT"
 
 ## 7 
+
+Four tasks/incidents that require coordination between three operations teams: applicatio, database and SAN- and infrastructure:
+
+*TBA*
+
+## 8
+
+This result tells us the amount of src attributes that point to URLs starting with http. This test is not accurate because the src could be set in JavaScript or other ways we are not aware of. Google gives a result of 0 for example.

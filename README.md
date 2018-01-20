@@ -22,3 +22,4 @@ Date        | Topics
 ## TODO
 
 * Add lab solutions to 01-19
+    * do task 7
