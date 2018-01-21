@@ -60,7 +60,12 @@ Sent the info. Chose the group name "TnT"
 
 ## 7 
 
-Four tasks/incidents that require coordination between three operations teams: applicatio, database and SAN- and infrastructure:
+Four tasks/incidents that require coordination between three operations teams; application, database and SAN- and infrastructure, even though it only needs to be handled by one of them:
+
+*WIP*
+
+* Scaling up application servers
+* Database servers down for maintenence
 
 *TBA*
 
