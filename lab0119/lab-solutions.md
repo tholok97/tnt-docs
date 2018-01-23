@@ -69,6 +69,18 @@ Four tasks/incidents that require coordination between three operations teams; a
 
 *TBA*
 
+// Thomas: You should review this and make corresponding adjustments, if you think this suggestion/ parts
+   of the suggestion are too farfetched :) //
+3)
+SQL Query:
+SQL quering is something the database layer is doing. However, the application and storage is also involved.
+The application (which interface to the user) sends a query to the database layer. As there are multiple
+database servers, one can assume that the "up-to-date-data" is stored in the storage layer, and the database
+layer works as a cache between the storage and the application layer. Therefore the database is fetching the
+up-to-date-data from the storage layer, processing it, and sends the result to the application layer, which
+in turn produces an user friendly output/ result to the user.
+
+
 ## 8
 
 This result tells us the amount of src attributes that point to URLs starting with http. This test is not accurate because the src could be set in JavaScript or other ways we are not aware of. Google gives a result of 0 for example.
