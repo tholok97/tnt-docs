@@ -11,7 +11,7 @@
 ### Installed mysql server:
 
         apt-get update
-        apt-get install mysql-server
+        apt-get install mariadb-server
 
 (chose password "dynamitt")
     
@@ -29,9 +29,9 @@ Some useful commands:
 
 ### Configuring mysql
 
-Config is under `mariadb.conf.d/50-server.cnf`. Opened it and changed the bind-address under `[mysqld]` to 0.0.0.0.
+Config is under `mariadb.conf.d/50-server.cnf`. Opened it and changed the `bind-address` under `[mysqld]` to 0.0.0.0.
 
-Configured root with new privilidges with `GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION; FLUSH PRIVILEGES;`. (To allow root to connect from manager).
+Configured root with new privilides with `GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY 'dynamitt' WITH GRANT OPTION; FLUSH PRIVILEGES;`. (To allow root to connect from manager. We undid this after)
 
 See users with `select * from mysql.user\G`
 
