@@ -39,7 +39,7 @@ See users with `select * from mysql.user\G`
 
         mysql -h server -u user -p mysql
 
-**NOTE**: had to install a mysql-client on manager
+**NOTE**: had to install a `mariadb-client-core-10.0` on manager
 
 Works!
 
@@ -49,9 +49,9 @@ Works!
 
 ## 2
 
-Created db for bookface with `CREATE DATABASE bookacedb` in mysql
+Created db for bookface with `CREATE DATABASE bookfacedb` in mysql
 
-Added bookface user with the command `GRANT SELECT,UPDATE,INSERT,CREATE,DROP,DELETE on bookfacedb.* to 'harry'@'10.10.0.%' identified by 'kaboom';`
+Added bookface user with the command `GRANT SELECT,UPDATE,INSERT,CREATE,DROP,DELETE ON bookfacedb.* TO 'harry'@'10.10.0.%' IDENTIFIED BY 'kaboom';`
 
 Tested that could connect from www1 and www2.
 
