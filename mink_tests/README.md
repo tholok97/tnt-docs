@@ -1,4 +1,4 @@
-# Functional test of our deploymet of bookface using mink and phpunit
+# Functional test of our deployment of bookface using mink and phpunit
 
 ## Dependencies
 
