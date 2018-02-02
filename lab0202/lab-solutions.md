@@ -8,7 +8,6 @@ Made new instance `dockertest`
 * medium size
 * manager key
 
-
 ## Installing docker ce
 
 Used this installation guide to install Docker CE: <https://docs.docker.com/install/linux/docker-ce/ubuntu/>
@@ -36,11 +35,11 @@ Used this installation guide to install Docker CE: <https://docs.docker.com/inst
 
         sudo docker run hello-world
 
-Made it into a script that can be found in this directory.
+Made it into a script that can be found in this directory under the name `dockerInstall.sh`
 
 # 2
 
-## Basic www container
+## Basic www container (interactive setup)
 
 Made container with `docker run --name wwwtest2 -i -t ubuntu:16.04 /bin/bash`
 
@@ -50,30 +49,56 @@ Committed changes with `docker commit -m "somemessage" wwwtest2 wwwtest3`
 
 Ran new container with same command as above, but exposed port 80 with `-p 80:80`
 
+Have to manually start apache2 upon startup...
+
+# 3
+
+Started up two of the basic www containers. (Have to leave a shell open for each of them... This is bad, but did it cause we spent way too much time messing around with trying to get apache2 running on startup)
+
+# 4
+
+Added a backend definition to haproxy on manager by adding:
+
+        backend dockerNodes
+            mode http
+            balance roundrobin
+            server container1 10.10.1.5:36768 check
+            server container1 10.10.1.5:36769 check
+
+Made the server use the new backend by altering the default-
+
+Changed the `default_backend` to dockerNodes
+
+# 5
+
+Diagram is in this directory with the name `infrastructure_diagram.jpg`
+
 # 6
 
-Lists all containers (both running and stopped)
+`docker ps -a` lists all containers (both running and stopped)
 
 # 7
 
-`docker rm`
+`docker rm` is used to remove a stopped docker instance
 
 # 8
 
-`--name` ved `docker run`, `docker rename <OLD> <NEW>`
+`--name` when doing `docker run`, `docker rename <OLD> <NEW>` when already created instance
 
 # 9
 
-According to our tests. no.
+According to our tests. no. Not by default
+
+A quick google search shows that this is possible
 
 # 10
 
-According to our tests: no.
+You can ping the other container if you know it's IP address. By default the containers are started in the network "bridge". To check out their IPs you can run `docker inspect network bridge`
 
 # 11
 
-*TBA*
+Docker swarm is where multiple machines running docker collaborate on running containers. Our architecture could benefit by us running both the db and the www servers in containers, allowing for easy horizontal scaling.
 
 # 12
 
-Yes we could do this. This means we could easily spin up more docker-enabled VMs to run our containers on.
+Yes we could do this. This means we could easily spin up more docker-enabled VMs to run our containers on. (This also means adding docker-enabled VMs to our swarm would be less painless)
