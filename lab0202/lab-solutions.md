@@ -51,6 +51,25 @@ Ran new container with same command as above, but exposed port 80 with `-p 80:80
 
 Have to manually start apache2 upon startup...
 
+## Dockerfiled image (made after lab)
+
+* Cloned down bookface from <https://git.cs.hioa.no/kyrre/bookface> and did the necessary preparations listed in the readme (making `config.php`, filling it with the appropriate values, etc.)
+* Made a Dockerfile in the root of the repository that looks like this:
+
+        FROM ubuntu:16.04
+        MAINTAINER Thomas Løkeborg "thomahl@stud.ntnu.no" 
+
+        # update and install all necessary services
+        RUN apt-get -y update && apt-get -y install apache2 libapache2-mod-php php-mysql
+
+        # ask nicely to expose port 80
+        EXPOSE 80
+
+        # start apache2 by default
+        CMD /usr/sbin/apache2ctl -D FOREGROUND
+
+  built it by doing `docker build -t dockerfiletest .` and run it by doing `docker run -v /home/ubuntu/bookface/code:/var/www/html -itd -P dockerfiletest`. Can spin up new containers with the same run command, and check their ports with `docker ps`
+
 # 3
 
 Started up two of the basic www containers. (Have to leave a shell open for each of them... This is bad, but did it cause we spent way too much time messing around with trying to get apache2 running on startup)
