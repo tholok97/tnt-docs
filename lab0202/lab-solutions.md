@@ -35,3 +35,45 @@ Used this installation guide to install Docker CE: <https://docs.docker.com/inst
         sudo apt-get install docker-ce
 
         sudo docker run hello-world
+
+Made it into a script that can be found in this directory.
+
+# 2
+
+## Basic www container
+
+Made container with `docker run --name wwwtest2 -i -t ubuntu:16.04 /bin/bash`
+
+Followed the instructions on installing bookface from previous lab (**NOTE**: Replaced all occurances of php5 with php).
+
+Committed changes with `docker commit -m "somemessage" wwwtest2 wwwtest3`
+
+Ran new container with same command as above, but exposed port 80 with `-p 80:80`
+
+# 6
+
+Lists all containers (both running and stopped)
+
+# 7
+
+`docker rm`
+
+# 8
+
+`--name` ved `docker run`, `docker rename <OLD> <NEW>`
+
+# 9
+
+According to our tests. no.
+
+# 10
+
+According to our tests: no.
+
+# 11
+
+*TBA*
+
+# 12
+
+Yes we could do this. This means we could easily spin up more docker-enabled VMs to run our containers on.
