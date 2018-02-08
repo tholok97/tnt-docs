@@ -15,6 +15,7 @@ Date        | Topics
 01-19       | Load balancing. apache2, PHP, haproxy
 01-26       | Databases, mysql setup, bookface
 02-02       | Getting our hands dirty with Docker containers
+02-09       | *TBA*
 
 
 ## List of IPs
@@ -26,6 +27,7 @@ balancer            | 10.10.0.76 **(Floating: 10.212.136.82)**
 db1                 | 10.10.0.192
 www1                | 10.10.0.123
 www2                | 10.10.0.134
+
 
 ## Group consists of
 
