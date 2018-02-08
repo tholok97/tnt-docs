@@ -31,8 +31,3 @@ www2                | 10.10.0.134
 
 * Thomas Løkkeborg
 * Trond Håvard Thune
-
-## TODO
-
-* Add lab solutions to 01-19
-    * do task 7
