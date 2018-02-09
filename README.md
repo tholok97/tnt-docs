@@ -27,6 +27,8 @@ balancer            | 10.10.0.76 **(Floating: 10.212.136.82)**
 db1                 | 10.10.0.192
 www1                | 10.10.0.123
 www2                | 10.10.0.134
+wwwplaceholder      | 10.10.1.7
+dockertest          | 10.10.1.5
 
 
 ## Group consists of
