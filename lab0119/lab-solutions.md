@@ -62,6 +62,11 @@ Sent the info. Chose the group name "TnT"
 
 Four tasks/incidents that require coordination between three operations teams; application, database and SAN- and infrastructure, even though it only needs to be handled by one of them:
 
+1. **Application servers hacked.** Only the Application people need to debug it, but the rest of the teams should be aware of the scale of the hack, so they can respond if appropriate (it's their call).
+2. **Application server hardware switched out.** Database people need to know because they'll see new hardware suddenly using their databases, which could be suspicious if they weren't forewarned.
+3. **TBA.** TBA.
+4. **TBA.** TBA.
+
 *WIP*
 
 * Scaling up application servers
