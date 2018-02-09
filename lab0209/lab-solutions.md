@@ -40,3 +40,16 @@ Did that. Yes, it can be useful when updating the entrypoint to the system. (Cre
 ## 8
 
 Script is found in this directory "task8_in.sh" and "task8_out.sh"
+
+## 9
+
+wc prints newline, bytecount and wordcount for each file
+
+## 10
+
+* The first command shows partitions and disk usage
+* The second command shows directories sorted after disk usage (ascending)
+
+## 11
+
+
