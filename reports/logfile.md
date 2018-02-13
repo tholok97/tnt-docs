@@ -1,4 +1,6 @@
 # Logfile for all incidents handled by startServers.sh
 
-`2018-02/13:::21:36:35 GMT --> wwwtest is shut down! Restarting....`
-`2018-02/13:::21:46:10 GMT --> wwwtest is shut down! Restarting....`
+`2018-02/13:::21:56:52 GMT --> wwwtest is shut down! Restarting....`
+
+`2018-02/13:::21:57:33 GMT --> wwwtest is shut down! Restarting....`
+
