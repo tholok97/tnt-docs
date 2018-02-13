@@ -1,7 +1,11 @@
 #!/bin/bash
 
+
 #This is a bash script that automates the startup process of servers that
 #are shut down. This does not affect servers that should stay shut down.
+#Every incident is reported to logfile.txt in the git-repo with timestamp of
+#the occurence (YYYY-MM/DD:::hh:mm:ss GMT).
+#The logfile needs to be pushed manually to GitHub as of now.
 
 #Array of servers that SHOULD be on shutdown.
 #(This script WILL NOT turn on these servers).
@@ -27,7 +31,7 @@ for server in $(openstack server list); do
     #Else if this is a production server, it will go on and check
     #if the status is on SHUTOFF. It will then restart the server.
     elif [[ $stat = "SHUTOFF"  ]]; then
-        echo "$name is shut down! Restarting...." >> testlog.txt
+        echo -e "\`$(date +%Y-%m/%d:::%H:%M:%S) GMT --> $name is shut down! Restarting....\`\\n" >> /home/ubuntu/tnt-docs-tholok/reports/logfile.md
         openstack server start $name
     fi
 done
