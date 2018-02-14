@@ -24,3 +24,11 @@
 
 `2018-02/14:::14:00:42 GMT --> wwwtest is shut down! Restarting....`
 
+`2018-02/14:::16:00:53 GMT --> db1 is shut down! Restarting....`
+
+`2018-02/14:::18:01:07 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/14:::20:00:39 GMT --> thomasdev is shut down! Restarting....`
+
+`2018-02/14:::22:00:54 GMT --> db1 is shut down! Restarting....`
+
