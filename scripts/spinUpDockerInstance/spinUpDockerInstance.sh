@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Takes one argument!! The name of the new instance
+# Takes one argument!! The name of the new instance (MUST BE UNIQUE)
 
 # new server with:
 # * image -> ubuntu 16.04 amd65
@@ -13,20 +13,28 @@ openstack server create \
     --key-name managerkey \
     $1
 
-# sleep 120 seconds, print output while doing so
-echo ">> Sleeping 120 seconds while instance is spinning up"
-for i in `seq 1 120`; do
-    echo ">> $i"
-    sleep 1
-done 
+# Determine IP of new instance. Keep polling until instance is ready to give IP
+echo ">> Waiting for new instance to receive IP"
+while [[ -z $INSTANCE_IP ]]; do
+    echo ">>> Polling for IP"
 
-# determine ip of new machine
-INSTANCE_IP=$(openstack server show $1 | awk 'FNR == 13 {print $4}' | awk -F'=' '{print $2}' | awk -F',' '{print $1}')
+    # try and fetch IP of new instance
+    INSTANCE_IP=$(openstack server show $1 | awk 'FNR == 13 {print $4}' | awk -F'=' '{print $2}' | awk -F',' '{print $1}')
+done
 
-# output if it's working
-echo ">> Trying to connect...."
-ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "echo 'Connected! (sent from new instance)'"
+# remove hashed key-entries for (possibly not) new IP
+# TO AVOID: weird "WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!" messages
+ssh-keygen -R $INSTANCE_IP
 
+# output given IP
+echo ">>> IP is: $INSTANCE_IP"
+
+# Poll until new instance is ready for connection. 
+echo ">> Waiting for new instance to be ready to receive work... (shouldn't take longer than 2 minutes)"
+until ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "echo 'Connected! (sent from new instance)'"; do
+    echo ">>> Not ready yet... (sleeping 5 seconds)"
+    sleep 5
+done
 
 # scp docker install script to new machine and do the install
 echo ">> Installing docker on new instance"
