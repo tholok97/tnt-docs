@@ -24,3 +24,25 @@
 
 `2018-02/14:::14:00:42 GMT --> wwwtest is shut down! Restarting....`
 
+`2018-02/14:::16:00:53 GMT --> db1 is shut down! Restarting....`
+
+`2018-02/14:::18:01:07 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/14:::20:00:39 GMT --> thomasdev is shut down! Restarting....`
+
+`2018-02/14:::22:00:54 GMT --> db1 is shut down! Restarting....`
+
+`2018-02/15:::00:01:06 GMT --> www2 is shut down! Restarting....`
+
+`2018-02/15:::02:00:39 GMT --> db1 is shut down! Restarting....`
+
+`2018-02/15:::04:00:41 GMT --> thomasdev is shut down! Restarting....`
+
+`2018-02/15:::06:00:39 GMT --> thomasdev is shut down! Restarting....`
+
+`2018-02/15:::08:00:53 GMT --> dockertest is shut down! Restarting....`
+
+`2018-02/15:::10:01:12 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/15:::12:00:42 GMT --> thomasdev is shut down! Restarting....`
+
