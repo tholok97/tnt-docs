@@ -62,12 +62,12 @@ Sent the info. Chose the group name "TnT"
 
 *(Our best attempt. We don't feel qualified to give insightful input on this question. We'd love to hear a good answer to this question from you.)*
 
-Four tasks/incidents that require coordination between three operations teams; application, database and SAN- and infrastructure, even though it only needs to be handled by one of them:
+### Four tasks/incidents that require coordination between three operations teams; application, database and SAN- and infrastructure, even though it only needs to be handled by one of them:
 
 1. **Application servers hacked.** Only the Application people need to debug it, but the rest of the teams should be aware of the scale of the hack so they can respond if appropriate (it's their call). The database operators might want to do a search for malicious information in their databases, and the SAN people might want to prepare backups (determine how far they would have to go).
 2. **Application server hardware switched out.** Application operators might decide to switch out their hardware for new ones (or their VMs for new ones). Database people should know because they'll see new hardware suddenly using their databases, which could be suspicious if they weren't forewarned.
 3. **Scaling up/down application servers.** Operators of the application servers should feel free to scale the service up and down as they please, but they have to keep the rest of the teams up-to-date to avoid scaling issues. The database and the SAN-infrastructure could be overloaded or overpowered.
-4. **SAN moving sites**. ??? TBA
+4. **A database server going down.** It's the database server operators responsability to bring it up again, but the application server operators should be aware, so they don't overload the remaining database server(s).
 
 ## 8
 
