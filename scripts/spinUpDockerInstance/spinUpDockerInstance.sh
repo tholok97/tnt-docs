@@ -41,3 +41,10 @@ echo ">> Installing docker on new instance"
 scp dockerInstall.sh ubuntu@$INSTANCE_IP:
 ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo chmod +x dockerInstall.sh"
 ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "./dockerInstall.sh"
+
+
+
+
+# SCP over bookface repo?
+# start running containers?
+# fetch IP of containers?
