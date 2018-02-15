@@ -42,7 +42,7 @@
 
 `2018-02/15:::08:00:53 GMT --> dockertest is shut down! Restarting....`
 
-`2018-02/15:::08:44:08 GMT --> dockertest is shut down! Restarting....`
-
 `2018-02/15:::10:01:12 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/15:::12:00:42 GMT --> thomasdev is shut down! Restarting....`
 
