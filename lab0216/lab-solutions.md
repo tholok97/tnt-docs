@@ -33,7 +33,7 @@ mysqldump (`mysqldump --opt --master-data=2 --flush-logs
 
 ## 4
 
-*TBA*
+Script can be found in this directory with the name "db1_fullBackup.sh"
 
 ## 5
 
