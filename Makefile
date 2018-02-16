@@ -6,15 +6,33 @@
 #   * einsvogel template: https://github.com/Wandmalfarbe/pandoc-latex-template
 # * pdfunite
 
-# Fetch relative path of each of the lab-solutions
-LAB_SOLUTIONS_MD=$(sort $(wildcard lab*/lab-solutions.md))
+# list of labs oblig constist of
+O1_LABS=0119 0126 0202 0209
+O2_LABS=0216
 
-# Convert into list of desired corresponding pdf's
-LAB_SOLUTIONS_PDF=$(patsubst lab%/lab-solutions.md,lab%/lab-solutions.pdf,$(LAB_SOLUTIONS_MD))
+# sort them
+O1_LABS_SORTED=$(sort $(O1_LABS))
+O2_LABS_SORTED=$(sort $(O2_LABS))
+
+# construct path to each lab
+O1_LAB_SOLUTIONS_MD=$(sort $(patsubst %,lab%/lab-solutions.md,$(O1_LABS_SORTED)))
+O2_LAB_SOLUTIONS_MD=$(sort $(patsubst %,lab%/lab-solutions.md,$(O2_LABS_SORTED)))
+
+# construct path to each desired pdf
+O1_LAB_SOLUTIONS_PDF=$(sort $(patsubst %,lab%/lab-solutions.pdf,$(O1_LABS_SORTED)))
+O2_LAB_SOLUTIONS_PDF=$(sort $(patsubst %,lab%/lab-solutions.pdf,$(O2_LABS_SORTED)))
+
+#-------------------------------- TARGETS --------------------------------------
+
+all: oblig1.pdf oblig2.pdf
 
 # To build oblig1.pdf: First compile all the pdf's, then merge them together
-oblig1.pdf: $(LAB_SOLUTIONS_PDF)
-	pdfunite $(LAB_SOLUTIONS_PDF) oblig1.pdf
+oblig1.pdf: $(O1_LAB_SOLUTIONS_PDF)
+	pdfunite $(O1_LAB_SOLUTIONS_PDF) oblig1.pdf
+
+# To build oblig2.pdf: First compile all the pdf's, then merge them together
+oblig2.pdf: $(O2_LAB_SOLUTIONS_PDF)
+	pdfunite $(O2_LAB_SOLUTIONS_PDF) oblig2.pdf
 
 # To build each sub-pdf: Throw some pandoc at it 
 lab%/lab-solutions.pdf: lab%/lab-solutions.md
