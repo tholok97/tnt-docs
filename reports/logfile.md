@@ -46,3 +46,17 @@
 
 `2018-02/15:::10:01:12 GMT --> www1 is shut down! Restarting....`
 
+`2018-02/15:::12:00:42 GMT --> thomasdev is shut down! Restarting....`
+
+`2018-02/15:::12:37:30 GMT --> wwwtest is shut down! Restarting....`
+
+`2018-02/15:::14:01:00 GMT --> dockertest is shut down! Restarting....`
+
+`2018-02/15:::16:00:46 GMT --> wwwtest is shut down! Restarting....`
+
+`2018-02/15:::18:00:42 GMT --> thomasdev is shut down! Restarting....`
+
+`2018-02/15:::20:00:41 GMT --> db1 is shut down! Restarting....`
+
+`2018-02/15:::22:00:44 GMT --> balancer is shut down! Restarting....`
+
