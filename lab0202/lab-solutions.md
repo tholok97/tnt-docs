@@ -92,6 +92,8 @@ Changed the `default_backend` to dockerNodes
 
 Diagram is in this directory with the name `infrastructure_diagram.jpg`
 
+![Diagram](./infrastructure_diagram.jpg)
+
 # 6
 
 `docker ps -a` lists all containers (both running and stopped)

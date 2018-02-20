@@ -42,13 +42,9 @@
 
 `2018-02/15:::08:00:53 GMT --> dockertest is shut down! Restarting....`
 
-`2018-02/15:::08:44:08 GMT --> dockertest is shut down! Restarting....`
-
 `2018-02/15:::10:01:12 GMT --> www1 is shut down! Restarting....`
 
 `2018-02/15:::12:00:42 GMT --> thomasdev is shut down! Restarting....`
-
-`2018-02/15:::12:37:30 GMT --> wwwtest is shut down! Restarting....`
 
 `2018-02/15:::14:01:00 GMT --> dockertest is shut down! Restarting....`
 
@@ -60,3 +56,86 @@
 
 `2018-02/15:::22:00:44 GMT --> balancer is shut down! Restarting....`
 
+`2018-02/16:::10:55:15 GMT --> backup is shut down! Restarting....`
+
+`2018-02/16:::10:58:55 GMT --> backup is shut down! Restarting....`
+
+`2018-02/16:::11:01:39 GMT --> backup is shut down! Restarting....`
+
+`2018-02/16:::11:04:10 GMT --> backup is shut down! Restarting....`
+
+`2018-02/17:::00:00:42 GMT --> www2 is shut down! Restarting....`
+
+`2018-02/17:::02:00:42 GMT --> www2 is shut down! Restarting....`
+
+`2018-02/17:::04:00:58 GMT --> balancer is shut down! Restarting....`
+
+`2018-02/17:::06:00:41 GMT --> balancer is shut down! Restarting....`
+
+`2018-02/17:::08:00:43 GMT --> balancer is shut down! Restarting....`
+
+`2018-02/17:::10:01:05 GMT --> www2 is shut down! Restarting....`
+
+`2018-02/17:::12:00:41 GMT --> db1 is shut down! Restarting....`
+
+`2018-02/17:::14:01:00 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/17:::16:01:05 GMT --> dockertest is shut down! Restarting....`
+
+`2018-02/17:::18:00:52 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/17:::20:01:03 GMT --> dockertest is shut down! Restarting....`
+
+`2018-02/17:::22:00:58 GMT --> dockertest is shut down! Restarting....`
+
+`2018-02/18:::00:00:40 GMT --> backup is shut down! Restarting....`
+
+`2018-02/18:::02:00:39 GMT --> balancer is shut down! Restarting....`
+
+`2018-02/18:::04:01:07 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/18:::06:01:11 GMT --> dockertest is shut down! Restarting....`
+
+`2018-02/18:::08:00:44 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/18:::10:00:51 GMT --> www2 is shut down! Restarting....`
+
+`2018-02/18:::12:00:44 GMT --> backup is shut down! Restarting....`
+
+`2018-02/18:::14:04:54 GMT --> dockertest is shut down! Restarting....`
+
+`2018-02/18:::16:00:55 GMT --> db1 is shut down! Restarting....`
+
+`2018-02/18:::18:01:12 GMT --> db1 is shut down! Restarting....`
+
+`2018-02/18:::20:01:12 GMT --> dockertest is shut down! Restarting....`
+
+`2018-02/18:::22:00:42 GMT --> backup is shut down! Restarting....`
+
+`2018-02/19:::00:01:09 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/19:::02:01:02 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/19:::04:00:43 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/19:::06:00:44 GMT --> balancer is shut down! Restarting....`
+
+`2018-02/19:::08:01:04 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/19:::10:00:44 GMT --> balancer is shut down! Restarting....`
+
+`2018-02/19:::10:39:33 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/19:::10:42:50 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/19:::10:47:12 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/19:::12:01:15 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/19:::14:01:01 GMT --> backup is shut down! Restarting....`
+
+`2018-02/19:::16:01:22 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/19:::20:00:42 GMT --> balancer is shut down! Restarting....`
+
+`2018-02/19:::22:00:44 GMT --> balancer is shut down! Restarting....`

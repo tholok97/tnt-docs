@@ -16,6 +16,7 @@ Date        | Topics
 01-26       | Databases, mysql setup, bookface
 02-02       | Getting our hands dirty with Docker containers
 02-09       | Bash-fu, automation, shellscripting, openstack cli
+02-16       | Backup in general, backup of mysql database
 
 
 ## List of IPs

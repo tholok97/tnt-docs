@@ -28,10 +28,13 @@ for server in $(openstack server list); do
     #nothing will happens.
     if [[ "${idleServers[@]}" =~ "${name}" ]]; then
             : # no-op #
+
     #Else if this is a production server, it will go on and check
-    #if the status is on SHUTOFF. It will then restart the server.
+    #if the status is on SHUTOFF. It so,the server will restart.
+    #An entry will then be appended to the logfile in the git-repo (for both tholok and thetlad)
     elif [[ $stat = "SHUTOFF"  ]]; then
-        echo -e "\`$(date +%Y-%m/%d:::%H:%M:%S) GMT --> $name is shut down! Restarting....\`\\n" >> /home/ubuntu/tnt-docs-tholok/reports/logfile.md
+        echo -e "\`$(date +%Y-%m/%d:::%H:%M:%S) GMT --> $name is shut down! Restarting....\`\\n" \
+            | tee -a /home/ubuntu/tnt-docs-thetlad/reports/logfile.md
         openstack server start $name
     fi
 done
