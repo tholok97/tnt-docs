@@ -140,3 +140,45 @@
 
 `2018-02/19:::22:00:44 GMT --> balancer is shut down! Restarting....`
 
+`2018-02/20:::00:00:44 GMT --> balancer is shut down! Restarting....`
+
+`2018-02/20:::04:00:45 GMT --> backup is shut down! Restarting....`
+
+`2018-02/20:::06:00:49 GMT --> backup is shut down! Restarting....`
+
+`2018-02/20:::08:00:43 GMT --> backup is shut down! Restarting....`
+
+`2018-02/20:::10:01:16 GMT --> db1 is shut down! Restarting....`
+
+`2018-02/20:::12:00:54 GMT --> balancer is shut down! Restarting....`
+
+`2018-02/20:::14:00:48 GMT --> www2 is shut down! Restarting....`
+
+`2018-02/20:::16:00:49 GMT --> db1 is shut down! Restarting....`
+
+`2018-02/20:::18:00:48 GMT --> backup is shut down! Restarting....`
+
+`2018-02/20:::20:01:10 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/21:::00:01:43 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/21:::02:00:48 GMT --> backup is shut down! Restarting....`
+
+`2018-02/21:::04:01:16 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/21:::06:00:49 GMT --> backup is shut down! Restarting....`
+
+`2018-02/21:::08:01:17 GMT --> www1 is shut down! Restarting....`
+
+`2018-02/21:::09:04:19 GMT --> wwwplaceholder is shut down! Restarting....`
+
+`2018-02/21:::09:06:35 GMT --> docker is shut down! Restarting....`
+
+`2018-02/21:::09:11:26 GMT --> docker is shut down! Restarting....`
+
+`2018-02/21:::10:02:11 GMT --> balancer is shut down! Restarting....`
+
+`2018-02/21:::12:00:53 GMT --> backup is shut down! Restarting....`
+
+`2018-02/21:::14:01:23 GMT --> docker is shut down! Restarting....`
+
