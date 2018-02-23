@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 # Takes one argument!! The name of the new instance (MUST BE UNIQUE)
 
@@ -38,7 +38,7 @@ done
 
 # scp docker install script to new machine and do the install
 echo ">> Installing docker on new instance"
-scp dockerInstall.sh ubuntu@$INSTANCE_IP:
+scp ./dockerInstall.sh ubuntu@$INSTANCE_IP:
 ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo chmod +x dockerInstall.sh"
 ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "./dockerInstall.sh"
 
@@ -46,5 +46,28 @@ ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "./dockerInstall.sh"
 
 
 # SCP over bookface repo?
+scp -r ./bookfaceimage ubuntu@$INSTANCE_IP:
+# build containers?
+ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo docker build -t bookfaceimage bookfaceimage"
+
+
 # start running containers?
+ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo docker run --restart always --name 01 -d -p 32769:80 bookfaceimage"
 # fetch IP of containers?
+#ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo docker ps" | grep 01
+#ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo docker ps" | grep 01 | awk '{print $12}' | awk -F':' '{print $2}' | awk -F'-' '{print $1}'
+
+# start running containers?
+ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo docker run --restart always --name 02 -d -p 32768:80 bookfaceimage"
+# fetch IP of containers?
+#ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo docker ps" | grep 02 | awk '{print $12}' | awk -F':' '{print $2}' | awk -F'-' '{print $1}'
+
+# start running containers?
+ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo docker run --restart always --name 03 -d -p 32767:80 bookfaceimage"
+# fetch IP of containers?
+#ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo docker ps" | grep 02 | awk '{print $12}' | awk -F':' '{print $2}' | awk -F'-' '{print $1}'
+
+# start running containers?
+ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo docker run --restart always --name 04 -d -p 32766:80 bookfaceimage"
+# fetch IP of containers?
+#ssh -o "StrictHostKeyChecking no" -t ubuntu@$INSTANCE_IP "sudo docker ps" | grep 02 | awk '{print $12}' | awk -F':' '{print $2}' | awk -F'-' '{print $1}'
