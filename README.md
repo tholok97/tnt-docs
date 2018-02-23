@@ -17,20 +17,7 @@ Date        | Topics
 02-02       | Getting our hands dirty with Docker containers
 02-09       | Bash-fu, automation, shellscripting, openstack cli
 02-16       | Backup in general, backup of mysql database
-
-
-## List of IPs
-
-Machine             | IP
---------------------|-------------------------------------
-manager             | 10.10.0.70 **(Floating: 10.212.136.14)**
-balancer            | 10.10.0.76 **(Floating: 10.212.136.82)**
-db1                 | 10.10.0.192
-www1                | 10.10.0.123
-www2                | 10.10.0.134
-wwwplaceholder      | 10.10.1.7
-dockertest          | 10.10.1.5
-
+02-23       | Memcache. Memcached.
 
 ## Group consists of
 
