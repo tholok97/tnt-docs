@@ -9,9 +9,7 @@
 
 #Array of servers that SHOULD be on shutdown.
 #(This script WILL NOT turn on these servers).
-idleServers=("docker_swam_worker2" 
-             "docker_swarm_worker" 
-             "wwwplaceholder"
+idleServers=("wwwplaceholder"
             )
 
 
