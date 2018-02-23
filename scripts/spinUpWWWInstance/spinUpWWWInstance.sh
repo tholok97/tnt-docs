@@ -51,6 +51,6 @@ ssh -t ubuntu@$INSTANCE_IP "sudo ./wwwInstall.sh"
 ssh -t ubuntu@$INSTANCE_IP "sudo chown -R ubuntu /var/www/html"
 
 # scp over bookface
-scp -r ../spinUpDockerInstance/bookfaceimage/bookface/code/* ubuntu@$INSTANCE_IP:/var/www/html
+scp -r ./bookface/code/* ubuntu@$INSTANCE_IP:/var/www/html
 
 
