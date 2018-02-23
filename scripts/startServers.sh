@@ -10,6 +10,7 @@
 #Array of servers that SHOULD be on shutdown.
 #(This script WILL NOT turn on these servers).
 idleServers=("wwwplaceholder"
+             "docker"
             )
 
 
@@ -32,7 +33,7 @@ for server in $(openstack server list); do
     #An entry will then be appended to the logfile in the git-repo (for both tholok and thetlad)
     elif [[ $stat = "SHUTOFF"  ]]; then
         echo -e "\`$(date +%Y-%m/%d:::%H:%M:%S) GMT --> $name is shut down! Restarting....\`\\n" \
-            | tee -a /home/ubuntu/tnt-docs-thetlad/reports/logfile.md
+            | tee -a /home/ubuntu/logfile.md
         openstack server start $name
     fi
 done
