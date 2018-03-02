@@ -1,5 +1,5 @@
 # WHAT:
-#   Builds oblig1.pdf from the lab-solution markdown files
+#   Builds obligX.pdf from the lab-solution markdown files
 # DEPENDENCIES: (let me know if any are missing)
 # * make (duh)
 # * pandoc
