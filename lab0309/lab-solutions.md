@@ -15,9 +15,9 @@ Made a new private project called `docker`
 ## 2
 On both docker VM and manager VM:
 
-  `curl http://10.212.136.140/harbor.crt > /usr/local/share/ca-certificates/harbor.crt 
-  update-ca-certificates 
-  service docker restart `
+    curl http://10.212.136.140/harbor.crt > /usr/local/share/ca-certificates/harbor.crt 
+    update-ca-certificates 
+    service docker restart
 
 Logged in to Harbor via shell with `docker login 10.212.136.160`
 
