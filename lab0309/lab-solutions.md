@@ -1,7 +1,5 @@
 # Lab solutions for 09-02
 
-NB! Needs beautyfixes.
-
 ## 1
 Made new Harbor account on `10.212.136.160`:
 
