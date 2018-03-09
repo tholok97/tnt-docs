@@ -5,10 +5,10 @@ NB! Needs beautyfixes.
 ## 1
 Made new Harbor account on `10.212.136.160`:
 
-  `Username: TnT
-  Email: trondhth@stud.ntnu.no
-  First and last name: Tango November Tango
-  Password: dynamittH4rry`
+    Username: TnT
+    Email: trondhth@stud.ntnu.no
+    First and last name: Tango November Tango
+    Password: dynamittH4rry`
 
 Made a new private project called `docker`
 
