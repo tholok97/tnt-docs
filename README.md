@@ -18,6 +18,8 @@ Date        | Topics
 02-09       | Bash-fu, automation, shellscripting, openstack cli
 02-16       | Backup in general, backup of mysql database
 02-23       | Memcache. Memcached.
+03-02       | Ytelse
+03-09       | Docker-compose, Docker-swarm
 
 ## Group consists of
 
