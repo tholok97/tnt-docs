@@ -20,6 +20,7 @@ Date        | Topics
 02-23       | Memcache. Memcached.
 03-02       | Ytelse
 03-09       | Docker-compose, Docker-swarm
+03-16       | Database replication, Databaseclusters, Galera
 
 ## Group consists of
 
