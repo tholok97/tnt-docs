@@ -13,18 +13,17 @@ Prepared the new VMs for database clustering by following Kyrres slides.
 
 * Installed MariaDB on the three VMs by following this website: <https://downloads.mariadb.org/mariadb/repositories/#mirror=tripleit&distro=Ubuntu&distro_release=xenial--ubuntu_xenial&version=10.2>
 
-        sudo apt-get install software-properties-common
+        sudo apt-get -y install software-properties-common
         sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
         sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://mariadb.mirror.triple-it.nl/repo/10.2/ubuntu xenial main'
 
-        sudo apt update
-        sudo apt upgrade
-        sudo apt install mariadb-server
+        sudo apt -y update
+        sudo apt -y upgrade
+        sudo apt -y install mariadb-server
 
     Chose password "dynamitt" for all of the installations.
 
 * Made new conf file `/etc/mysql/conf.d/cluster.cnf` that looks like this (Note that the  wsrep_node_address has it's value set based on which machine we're configuring):
-
 
         [mysqld]
         # Cluster node configurations
@@ -44,9 +43,19 @@ Prepared the new VMs for database clustering by following Kyrres slides.
         # Galera synchronisation configuration
         wsrep_sst_method=rsync
 
-* Started db1 in "bootstrap" mode
+* Started db1 in "bootstrap" mode:
     * Stopped mysql
     * Waited for it to be finished stopping
-    * `service mysql bootstrap`
+    * `galera_new_cluster`
+    * (think we did service mysql start here)
 * Stopped and started mysql in db2 and db3
 * Stopped and started db1 in normal mode
+
+**NOTE**: We had a ton of trouble getting this to work.
+
+* Added bookface database and user as per "lab0126"
+* Loaded database from old db1 by doing:
+    * Dumped old db1 into file.
+    * Scp'd over file to new db1 (by adding to authorized keys)
+    * Loaded dump by logging into mysql as root, creating bookfacedb, using it and doing `source <thefile>`
+* Tested it by spinning up new www VM, and pointing it to new db1
