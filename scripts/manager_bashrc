@@ -41,10 +41,18 @@ function osssh {
     ssh ubuntu@$(osipof $1)
 }
 
-function osnew {
+function osnewtiny {
     openstack server create \
     --image af832c2e-2368-4e87-9f0e-196a4e82c70c \
     --flavor 0a4b6072-3170-447a-8ac1-89562fd1c042 \
+    --key-name managerkey \
+    $1
+}
+
+function osnewmedium {
+    openstack server create \
+    --image af832c2e-2368-4e87-9f0e-196a4e82c70c \
+    --flavor f2cb5be9-2e41-4c96-a377-25e20ca611ec \
     --key-name managerkey \
     $1
 }
