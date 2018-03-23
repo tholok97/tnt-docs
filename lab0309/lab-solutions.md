@@ -29,7 +29,7 @@ It works!
 
 Installed docker on www1, www2, www3.
 On manager: Initiated docker master by typing `docker swarm init`
-Return token: `docker swarm join --token SWMTKN-1-2m9qju0c629x6kb6gg2g53znymcae84uzijx4gmy2tnubo7rkg-dyn0opfv47zq48j0ow7z0a2xv 10.10.0.70:2377`
+Return token: `docker swarm join --token SWMTKN-1-5d0xxilhf03y8ds2zb1gdfrtj9duqm71uepzst8p2nz77lvih9-2096wfbcx0xm0ssjk34hi6941 10.10.0.70:2377`
 Added the token to all thre www servers.
 On manager: Checked if all nodes are connected by typing `docker node ls`. It works!
 

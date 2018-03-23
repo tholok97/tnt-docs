@@ -17,4 +17,5 @@ It works!
 ## 2
 Installed glusterfs-client on manager with `sudo apt install glusterfs-client`.
 Made a new directory on manager root called 'site' with `mkdir /site`
-
+Mounted the volume with `mount -t glusterfs storage1:gv0 /site`, also added this line in /etc/rc.local so it will start up again automatically after a reboot.
+Made a test file on manager's /site, and checked if this file exists in storage1's and storage2's /brick directory. It works!
