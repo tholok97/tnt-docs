@@ -115,7 +115,11 @@ aboom'
 
 ## 14
 
-Lag en backup policy som innebærer både full og inkrementell backup
+Backup Policy:
+
+* A full backup is taken every monday midnight.
+* Incremental backups are taken every days at midnight, except monday midnights.
+* If the bandwidth is too low at monday midnights, an incremental backup is taken instead of a full backup.
 
 ## 15
 
