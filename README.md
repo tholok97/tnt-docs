@@ -21,6 +21,8 @@ Date        | Topics
 03-02       | Performance
 03-09       | Docker-compose, Docker-swarm
 03-16       | Database replication, Databaseclusters, Galera
+03-23       | Networked storage (SAN)
+04-06       | Scripting with Python I
 
 ## Group consists of
 

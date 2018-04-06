@@ -59,3 +59,21 @@ Prepared the new VMs for database clustering by following Kyrres slides.
     * Scp'd over file to new db1 (by adding to authorized keys)
     * Loaded dump by logging into mysql as root, creating bookfacedb, using it and doing `source <thefile>`
 * Tested it by spinning up new www VM, and pointing it to new db1
+
+### To loadbalance between the clusternodes
+
+Added a frontend and backend to haproxy on balancer server. Like this:
+
+        frontend database
+            bind *:3306
+            mode tcp
+            default_backend databaseClusterBackend
+
+        backend databaseClusterBackend
+            mode tcp
+            balance roundrobin
+            server db1 10.10.1.160:3306 check
+            server db2 10.10.1.160:3306 check
+            server db3 10.10.1.138:3306 check       
+
+Changed config.php to aim at balancer on port 3306. (Currently only on our test-server "galeraTest")

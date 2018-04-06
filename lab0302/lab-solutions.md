@@ -16,5 +16,17 @@ We can see how likely / unlikely it is that we will have X amount of players. Bu
 
 ## 2
 
-`curl -u someuser:password "http://10.212.136.82:1936/;csv" | grep FRONTEND | head -1 | awk -F',' '{print $5}'`
+The script is in this directory with the name `log_incomming_connections.sh`. It looks like this:
 
+```
+#!/bin/bash
+
+# curl incomming connections
+CURRCONN=$(curl -su someuser:password "http://10.212.136.82:1936/;csv" | grep FRONTEND | head -1 | awk -F',' '{print $5}')
+
+# determine unixtime
+UNIXTIME=$(date +%s)
+
+# echo time,connections
+echo "$UNIXTIME,$CURRCONN"
+```
