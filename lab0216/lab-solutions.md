@@ -80,3 +80,12 @@ Do not stop at the end of requested binary log from a MySQL server, but rather c
 ## 12
 
 `mysqlbinlog --start-datetime="2018-02-14 09:00:00" --stop-datetime="2018-02-15 23:59:59" `
+
+## 13
+
+## 14
+Backup Policy:
+* A full backup is taken every monday midnight.
+* Incremental backups are taken every days at midnight, except monday midnights.
+* If the bandwidth is too low at monday midnights, an incremental backup is taken instead of a full backup.
+
