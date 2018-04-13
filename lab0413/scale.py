@@ -60,30 +60,22 @@ def get_rate(user, password, ip):
       return float(total_sessions)
 
 #Alternativ get_rate:
-  def get_rate_alt(user, password, ip):
-    return 3.0
+#  def get_rate_alt(user, password, ip):
+#    return 3.0
 
 def get_workers():
-  # docker service ls | rep bookface_web | awk '{print $4}' | sed -e 's/.*\///g'
-  output = subprocess.check_output(["docker service ls | rep bookface_web | awk '{print $4}' | sed -e 's/.*\///g'"], shell=True, executable='/bin/bash')
+  # docker service ls | grep bookface_web | awk '{print $4}' | sed -e 's/.*\///g'
+  output = subprocess.check_output(['sudo docker service ls | grep bookface | awk \'{print $4}\' | sed -e \'s/.*\///g\''], shell=True, executable='/bin/bash')
   output.rstrip()      #Fjerner newline.
-  verbose("Output = " + output)
   return float(output)  
 
-def get_workers_alt():
-  return float(2)
+#def get_workers_alt():
+#  return float(2)
   
-def scale_up(current, goal):
-  for i in range((current + 1), (goal + 1)):
-    verbose("Starting server " + str(i))
-    #legg inn dockercmd
-
-def scale_down(current, goal):
-  for i in range(current, goal, -1):
-    verbose("Shutting down server" + str(i))
-    #legg inn i dockercmd
-
-
+def scale(current, goal):
+  verbose("Scaling from " + str(current) + " servers to " + str(goal) + " servers")
+  output = subprocess.check_output(['sudo docker service scale bookface=' + str(goal)], shell=True, executable='/bin/bash')
+  
 
 # Hva skal skje i scriptet?
 
@@ -92,8 +84,8 @@ current_rate = get_rate(USER, PASSWORD, IP)
 verbose("Current rate " + str(current_rate))
 
 # 2) Get number of workers.
-current_worker = get_workers()
-verbose("Current workers " + str(current_worker))
+current_workers = get_workers()
+verbose("Current workers " + str(current_workers))
 
 # 3) Calculate the current needed capacity.
 needed_capacity = math.ceil(current_rate / RATE_PER_SERVER)
@@ -103,16 +95,16 @@ if needed_capacity < MIN_SERVERS:
   verbose("Adjusting needed capacity to minimum: " + str(MIN_SERVERS))
   needed_capacity = MIN_SERVERS
 elif needed_capacity  > MIN_SERVERS:
-  verbose("Adjusting needed capacit to maximum" + str(MAX_SERVERS))
+  verbose("Adjusting needed capacity to maximum" + str(MAX_SERVERS))
   needed_capacity = MAX_SERVERS
 
 # 4) Compare current needed with actual capacity and take action: reduce or increase or do nothing.
 if needed_capacity > current_workers:
   verbose("We need to increase the number of servers from " + str(current_workers) + " to " + str(needed_capacity))
-  scale_up(int(current_workers), int(needed_capacity))
+  scale(int(current_workers), int(needed_capacity))
 elif needed_capacity < current_workers:
   verbose("We need to decrease the number of server from " + str(current_workers) + " to " + str(needed_capacity))
-  scale_down(int(current_workers), int(needed_capacity))
+  scale(int(current_workers), int(needed_capacity))
 else:
   verbose("Current worker is adequate. No action needed")
 
