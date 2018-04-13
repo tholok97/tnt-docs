@@ -23,6 +23,7 @@ Date        | Topics
 03-16       | Database replication, Databaseclusters, Galera
 03-23       | Networked storage (SAN)
 04-06       | Scripting with Python I
+04-13       | Scripting with Python II
 
 ## Group consists of
 
