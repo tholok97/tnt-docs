@@ -1,5 +1,5 @@
 # WHAT:
-#   Builds oblig1.pdf from the lab-solution markdown files
+#   Builds obligX.pdf from the lab-solution markdown files
 # DEPENDENCIES: (let me know if any are missing)
 # * make (duh)
 # * pandoc
@@ -8,7 +8,7 @@
 
 # list of labs oblig constist of
 O1_LABS=0119 0126 0202
-O2_LABS=0209 0216
+O2_LABS=0209 0216 0223 0302 0309
 
 # sort them
 O1_LABS_SORTED=$(sort $(O1_LABS))

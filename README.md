@@ -18,7 +18,13 @@ Date        | Topics
 02-09       | Bash-fu, automation, shellscripting, openstack cli
 02-16       | Backup in general, backup of mysql database
 02-23       | Memcache. Memcached.
-
+03-02       | Performance
+03-09       | Docker-compose, Docker-swarm
+03-16       | Database replication, Databaseclusters, Galera
+03-23       | Networked storage (SAN)
+04-06       | Scripting with Python I
+04-13       | Scripting with Python II
+04-20	    | Scripting with Python III, Amazon AWS and pizza
 ## Group consists of
 
 * Thomas Løkkeborg
