@@ -25,7 +25,7 @@ alias pingdockertest='ping 10.10.1.5'
 alias os='openstack'
 alias oss='openstack server'
 
-source /home/ubuntu/tnt-docs-tholok/scripts/IMT3003_V18_group21-openrc.sh
+source /home/ubuntu/tnt-docs/scripts/IMT3003_V18_group21-openrc.sh
 
 alias scriptStartContainers='ssh -t ubuntu@10.10.1.5 "sudo /home/ubuntu/bookface/startContainers.sh"'
 

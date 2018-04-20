@@ -2,6 +2,11 @@
 bin/*
 build/*
 
+# ignore obligs
+oblig1.pdf
+oblig2.pdf
+oblig3.pdf
+
 # ignore vendor
 vendor/
 
