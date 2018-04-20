@@ -24,6 +24,7 @@ Date        | Topics
 03-23       | Networked storage (SAN)
 04-06       | Scripting with Python I
 04-13       | Scripting with Python II
+04-20       | Scripting with Python III, Amazon AWS and pizza
 
 ## Group consists of
 
