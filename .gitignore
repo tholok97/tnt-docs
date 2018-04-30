@@ -7,6 +7,9 @@ oblig1.pdf
 oblig2.pdf
 oblig3.pdf
 
+# ignore all pdfs
+*.pdf
+
 # ignore vendor
 vendor/
 
