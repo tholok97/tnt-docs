@@ -9,7 +9,7 @@
 # list of labs oblig constist of
 O1_LABS=0119 0126 0202
 O2_LABS=0209 0216 0223 0302 0309
-03_LABS=0406 0413
+03_LABS=0406
 
 # sort them
 O1_LABS_SORTED=$(sort $(O1_LABS))
