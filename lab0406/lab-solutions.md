@@ -11,6 +11,6 @@ One possible solution is to have each new server sending their internal IP-addre
 over scp to the backup server so they can be stored in the configuration file.
 
 Another, possible solution that supports dynamic thinking better, is to have one large Docker virtual machine
-that runs most of the servers, especially those virtual machines that should be taken backup of.
+that runs most of the servers as docker containers, especially those containers (virtual machines) that should be backuped.
 Then the config file on the backup server only need the IP-adress of the Docker virtual machine and no SSH- keys needed.
 The config file can be reorganized to store backup data based on docker instances, not virtual machines.

@@ -52,7 +52,7 @@ with open(CONFIG) as config:
         host = configlist[0]
         
         # step 0: Check there is a backup folder
-        host_backup_path = BACKUP_FOLDER #+ host
+        host_backup_path = BACKUP_FOLDER
         if not os.path.isdir(host_backup_path):
             verbose("Creating backup folder " + host_backup_path)
             os.makedirs(host_backup_path)
