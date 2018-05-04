@@ -28,7 +28,7 @@ O3_LAB_SOLUTIONS_PDF=$(sort $(patsubst %,lab%/lab-solutions.pdf,$(O3_LABS_SORTED
 
 #-------------------------------- TARGETS --------------------------------------
 
-all: oblig1.pdf oblig2.pdf
+all: oblig1.pdf oblig2.pdf oblig3.pdf
 
 # To build oblig1.pdf: First compile all the pdf's, then merge them together
 oblig1.pdf: $(O1_LAB_SOLUTIONS_PDF)
