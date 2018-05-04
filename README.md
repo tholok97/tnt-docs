@@ -26,6 +26,7 @@ Date        | Topics
 04-13       | Scripting with Python II
 04-20	    | Scripting with Python III, Amazon AWS and pizza
 04-27	    | Dynamic Architectures
+05-04	    | NoSQL and CouchDB
 ## Group consists of
 
 * Thomas Løkkeborg
