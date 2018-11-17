@@ -9,7 +9,7 @@
 # list of labs oblig constist of
 O1_LABS=0119 0126 0202
 O2_LABS=0209 0216 0223 0302 0309
-03_LABS=0406 0413
+03_LABS=0406
 
 # sort them
 O1_LABS_SORTED=$(sort $(O1_LABS))
@@ -28,7 +28,7 @@ O3_LAB_SOLUTIONS_PDF=$(sort $(patsubst %,lab%/lab-solutions.pdf,$(O3_LABS_SORTED
 
 #-------------------------------- TARGETS --------------------------------------
 
-all: oblig1.pdf oblig2.pdf
+all: oblig1.pdf oblig2.pdf oblig3.pdf
 
 # To build oblig1.pdf: First compile all the pdf's, then merge them together
 oblig1.pdf: $(O1_LAB_SOLUTIONS_PDF)
